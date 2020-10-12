@@ -1,0 +1,327 @@
+/* 头部  内容  区域  */
+
+/* 头部背景  图片样式 */
+.hero {
+    background-color: #F6EAD0;
+    background-image: url(../images/01_bgImg/hero-bottom-new.png), url(../images/01_bgImg/hero.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center, 50% -100px;
+    background-size: 100%, 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 1260px;
+    margin-bottom: -1px;
+    position: relative;
+
+}
+
+
+/* 动态 的 云朵 样式 */
+.cloud {
+    position: absolute;
+    max-width: 300px;
+    animation-iteration-count: infinite;
+
+}
+
+/* 第一朵云 */
+.cloud-1 {
+    left: 100px;
+    top: 350px;
+
+    /* 添加  动画  效果 */
+    animation: cloud-left-1 60s linear infinite;
+}
+
+/* 设置 动画 */
+@keyframes cloud-left-1 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(200px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+/* 第二朵云 */
+.cloud-2 {
+    right: 100px;
+    top: 200px;
+    /* 添加  动画  效果 */
+    animation: cloud-right-2 60s linear infinite;
+}
+
+/* 设置 动画 */
+@keyframes cloud-right-2 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-200px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+/* 第三朵云 */
+.cloud-3 {
+    left: 300px;
+    top: 250px;
+    /* 添加  动画  效果 */
+    animation: cloud-left-3 60s linear infinite;
+}
+
+/* 设置 动画 */
+@keyframes cloud-left-3 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-200px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+/* 第四朵云 */
+.cloud-4 {
+    right: 400px;
+    top: 350px;
+    /* 添加  动画  效果 */
+    animation: cloud-right-4 60s linear infinite;
+}
+
+/* 设置 动画 */
+@keyframes cloud-right-4 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(200px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+/* 第五朵云 */
+.cloud-5 {
+    left: 300px;
+    top: 100px;
+    /* 添加  动画  效果 */
+    animation: cloud-right-2 60s linear infinite;
+}
+
+/* 设置 动画 */
+@keyframes cloud-right-2 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(300px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+
+/* 头部 导航  nav 的样式 */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40PX;
+}
+
+@media(max-width: 992px) {
+    nav ul li {
+        margin: 0 20px;
+    }
+}
+
+@media(min-width: 992px) {
+    nav ul li {
+        margin: 0 40px;
+    }
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    /* 添加  过渡  效果*/
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:before,
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 0px;
+    height: 4px;
+    margin: 0 0 0;
+    transition: all 0.3s ease-in-out;
+    transition-duration: 0.25s;
+    opacity: 0;
+    background-color: #FF6154;
+    left: 0;
+}
+
+nav ul li a:hover:before,
+nav ul li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+nav ul li:first-child a:hover::before,
+nav ul li:first-child a:hover::after {
+    width: 0;
+    opacity: 0;
+
+}
+
+nav ul li:first-child a {
+    padding: 5px 20px;
+    border: 4px solid #FF6154;
+    border-radius: 20px;
+
+}
+
+/* 设置动画效果 */
+
+/* 趣妙  海洋 */
+.hero-inside {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.hero-inside .logo {
+    width: 300px;
+    height: 80px;
+    max-width: 400px;
+    margin: 30px 0;
+    border: 7px solid #142C4A;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.hero-inside .logo p {
+    width: 300px;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 30px;
+    font-weight: 700;
+    font-size: 38px;
+    color: #3CB0AE;
+    padding-left: 10px;
+    box-sizing: border-box;
+
+}
+
+.hero-inside .logo .decalate {
+    width: 150px;
+    height: 40px;
+    /* border: 1px solid red; */
+    background-color: #f5e6cf;
+    color: #f37752;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -75px;
+}
+
+.hero-inside h2,
+.hero-inside h3 {
+    line-height: 0.7;
+    font-weight: 700;
+}
+.btn {
+    display: block;
+    border-radius: 100px;
+    border: none;
+    padding: 18px 30px;
+    transition: all 0.2s;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-size: contain;
+    text-shadow: 0 1px 1px rgba(15, 34, 58, 0.19);
+    color: #FFFFFF;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    text-align: center;
+    margin-top: 60px;
+}
+.btn:hover {
+    text-decoration: none;
+    outline: none;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.btn:active{
+    outline: none;
+    border: none;
+}
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.btn-orange {
+    background: #E74F43 url(../images/08_button/orange.png) no-repeat right bottom;
+}
+.btn-orange:hover {
+    background-color: #db2a1c;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}

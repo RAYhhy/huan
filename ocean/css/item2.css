@@ -1,0 +1,123 @@
+body{
+    overflow: hidden;
+}
+/* 第二部分样式 */
+#list-item-2 {
+    overflow: hidden;
+    background-image: url(../images/01_bgImg/about-top.jpg);
+    position: relative;
+    height: 2000px;
+}
+/* 光线图片设置 */
+#list-item-2 .light img{
+    position: absolute;
+    top:-250px;
+}
+#list-item-2 .light img:first-child{
+    left:10%;
+}
+#list-item-2 .light img:nth-child(2){
+    left:20%;
+}
+#list-item-2 .light img:nth-child(3){
+    left:30%;
+}
+#list-item-2 .light img:nth-child(4){
+    left:50%;
+}
+#list-item-2 .light img:nth-child(5){
+    left:70%;
+}
+#list-item-2 .light img:nth-child(6){
+    left:90%;
+}
+/* 潜水员设置 */
+.diver{
+    position: absolute;
+    top:50px;
+    left:40%;
+}
+/* 左右背景设置 */
+.bgLeft{
+    position: absolute;
+    left:0;
+}
+.bgRight{
+    position: absolute;
+    right:0;
+}
+/* 视频设置 */
+.video{
+    width: 1000px;
+    height: 500px;
+    margin: 180px auto;
+    box-sizing: border-box;
+    padding: 100px 160px;
+}
+.video .card{
+    float: left;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.video p,.imgshow p{
+    text-align: center;
+}
+.video h2{
+    color:white;
+    text-align: center;
+}
+/* 图片设置 */
+.imgshow {
+    width: 1000px;
+    margin: 400px 50%;
+    margin-left: 250px;
+    box-sizing: border-box;
+}
+.imgshow .card{
+    float: left ;
+}
+.imgshow .card img{
+    height: 190px;
+}
+/* 鱼群设置 */
+.fish img{
+    position: absolute;
+}
+.fish img:nth-child(1){
+    bottom:200px;
+    left:25%;
+}
+.fish img:nth-child(2){
+    bottom:200px;
+    right:25%;
+}
+.fish img:nth-child(3){
+    bottom:956px;
+    right:6%;
+}
+.fish img:nth-child(4){
+    top:0px;
+    right:6%;
+}
+
+/* 动态鱼  设置 */
+.dynamic_fish{
+    position: absolute;
+    top: 75px;
+    left: 230px;
+}
+.dynamic_fish .about_fish{
+    animation: dynamic_fish 20s linear infinite;
+
+}
+@keyframes dynamic_fish{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
