@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .box{
+            padding: 40px;
+            width: 480px;
+            height: 560px;
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            box-sizing: border-box;
+            background-color: #efefef;
+           
+        }
+        .output{
+            height: 80px;
+            border: 2px solid #999;
+            text-align: right;
+            line-height: 80px;
+            font-size: 50px;
+            font-weight: bold;
+            color:#666;
+            padding-right: 30px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        ul{
+            list-style: none;
+            height:375px;
+            margin-top: 40px;
+            margin: 0;
+            margin-top: 40px;
+            padding: 0;
+        
+        }
+        ul li{
+            width: 81px;
+            height: 50px;
+            border: 2px solid #999;
+            background-color: #fff;
+            float: left;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 50px;
+            margin-bottom: 20px;
+            color:#999;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        ul li:nth-child(4n){
+            margin-right: 0px;
+        }
+        ul li:hover{
+            background-color: #efefef;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var div_el = document.createElement("div");
+        var body = document.body;
+        var output = document.createElement("div");
+
+        div_el.classList.add("box");
+        body.appendChild(div_el);
+       
+        output.classList.add("output");
+        div_el.appendChild(output);
+
+        output.appendChild(document.createTextNode("0"))
+        ;;
+        var ul_el = document.createElement("ul");
+        div_el.appendChild(ul_el);
+
+        var arr = ['CE','C','←','÷','7','8','9','×','4','5','6','-','1','2','3','+','+/-','0','.','=']; 
+        for(var i = 0; i<arr.length;i++){
+            var li_el = document.createElement("li");
+            li_el.innerHTML = arr[i];
+            ul_el.appendChild(li_el);
+        }
+        document.onmousedown = document.onmouseup = function(){
+            return false;
+        }
+    </script>
+</body>
+</html>
