@@ -1,0 +1,129 @@
+ /* 设置body的样式 */
+ body{
+    margin: 0;
+    padding: 0;
+    background-color: #c3e6fd;
+}
+/* 设置大盒子的样式 */
+.wrapper{
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px 50px;
+}
+/* 设置上半部分盒子 */
+.wrapper .top{
+    width: 100%;
+    height: 200px;
+    border-bottom: 2px solid #ddedf0;;
+}
+/* 设置输入框的样式 */
+.wrapper .top input{
+    outline:none;
+    display:block;
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border:none;
+    color:#999;
+}
+/* 设置输入框提示信息的样式  */
+.wrapper .top input::-webkit-input-placeholder{
+    font-size: 18px;
+    color:#999;
+}
+/* 设置按钮的样式 */
+.wrapper .top button{
+    width: 80px;
+    height: 40px;
+    outline:none;
+    background-color:#fff;
+    float:right;
+    border:none;
+    border-radius:10px;
+}
+/* 设置下半部分的样式  */
+.wrapper .bottom{
+    margin-top: 30px;
+    width: 100%;
+}
+/* 去除ul的默认样式 */
+ul{
+    margin: 0;
+    padding: 0;
+}
+/* 设置每个li的样式 */
+.bottom ul li{
+    width: 100%;
+    padding-left: 20px;
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 55px;
+    position: relative;
+    margin-bottom: 25px;
+    background-color: #fff;
+    
+}
+/* 设置小圆点盒子的样式 */
+.can{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    position:absolute;
+    top:-1px;
+    right:-1px;
+    box-sizing:border-box;
+    border-radius:18px;
+    padding-left: 7px;
+
+}
+/* 设置小圆点的样式 */
+.can span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: orangered;
+    border-radius:50%;
+    float: left;
+    margin-right: 2px;
+    margin-top: 3px;
+}
+/* 设置功能按钮的样式 */
+.gongneng{
+    display:inline-block;
+    height: 40px;
+    width:78px;
+    text-align: center;
+    position: absolute;
+    right:-1px;
+    top:29px;
+    display: none;
+}
+/* 设置删除键的样式 */
+a{
+    text-decoration:none;
+    color:black;
+    font-size: 12px;
+}
+/* 设置时间显示模块的样式 */
+.time{
+    position: absolute;
+    bottom:8px;
+    left:20px;
+    font-size: 14px;
+    color:#999;
+}
+/* 设置文本内容显示的样式 */
+.text{
+    display: inline-block;
+    font-weight: 450;
+    width: 400px;
+    word-wrap:break-word;
+}
+/* textarea{
+    resize:none;
+    width: 500px;
+    height: 100px;
+} */
